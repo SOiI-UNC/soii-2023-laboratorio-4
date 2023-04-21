@@ -12,9 +12,9 @@ El objetivo del presente trabajo práctico es que el estudiante sea capaz diseñ
 
 ## Desarrollo
 
-![S2](index.png)
+![rgb](imgs/RGBcomposite.png)
 
-Se entrega un archivo en formato _GeoTif_ de una imágen del satélite *Sentinel 2a* sobre el centro de la Provincia de Córdoba. Dentro de ese archivo, se encuentran los 3 canales RGB junto muchos metadatos de georeferenciamiento y de la captura. Los canales se presentan en matrices monocromàticas, una por canal, que juntos forman la imagen RGB composite que se muestra.
+Se entrega un [archivo](https://drive.google.com/file/d/1uQYAZNlU2lIeRw2yqQuFdvkyCIhliZhy/view?usp=share_link) en formato _GeoTif_ de una imágen del satélite *Sentinel 2* sobre el centro de la Provincia de Córdoba. Dentro de ese archivo, se encuentran los 3 canales RGB junto muchos metadatos de georeferenciamiento y sobre la captura. Los canales se presentan en matrices monocromàticas, una por canal, que juntos forman la imagen RGB composite que se muestra.
 
 Existen numerosos algorimos de procesamiento de imágenes basados en convoluciones de la imagen con un kernel. Se pide que implemente un algoritmo que aplique un filtro de borde ([edge filter](https://en.wikipedia.org/wiki/Kernel_(image_processing))), tal como se detalla a continuación. 
 
@@ -48,12 +48,12 @@ Donde $g(x, y)$ es la imagen filtrada, $f(x, y)$ es la imagen original y $\omega
 - El código no debe contener errores de cppcheck.
 
 ## Entrega
-Como metodología para resolver este problema, se solicita que, primero, se realice un diseño que sea solución al problema sin explotar el paralelismo (procedural), realizar mètricas . Luego, a partir de este, realizar una nueva implementación que realice el proceso mediante el uso de la librería OpenMP, explotando el paralelismo del problema. Para ello, se requiere reconocer qué tipo de paralelismo exhibe el problema en cuestión y luego, diseñar la solución del mismo determinando cuáles son los datos/operaciones paralelizables. Se tendrá en cuenta, el nivel de paralelismo alcanzado.
+Como metodología para resolver este problema, se solicita que, primero, se realice un diseño que sea solución al problema sin explotar el paralelismo (procedural), realizar métricas . Luego, a partir de este, realizar una nueva implementación que realice el proceso mediante el uso de la librería OpenMP, explotando el paralelismo del problema. Para ello, se requiere reconocer qué tipo de paralelismo exhibe el problema en cuestión y luego, diseñar la solución del mismo determinando cuáles son los datos/operaciones paralelizables. Se tendrá en cuenta, el nivel de paralelismo alcanzado.
 
 La entrega se hace a travéz del repositorio de GitHub y se deberá demostrar la realizacion del mismo mediante un correcto uso. El repositorio deberá proveer los archivos fuente y cualquier otro archivo asociados a la compilación, archivos  de  proyecto  ”Makefile”  y  el  código correctamente documentado. No debe contener ningún archivo asociado a proyectos de un IDE y se debe asumir que el proyecto podrá ser compilado y corrido por una `tty` en una distribución de Linux con las herramientas típicas de desarrollo. También se deberá entregar un informe (que pude ser en MD en el repo) explicando paso a paso el desarrllo, inluyendo graficos del diseño solución propuesto, justificando en todo momento lo implementrado.
 También se deberá investigar acerca de qué utilidades de profiling gratuitas existen y que brinda cada una (un capítulo del informe), optando por una para realizar las mediciones de tiempo de ejecución de la aplicación diseñada.
 
-El informe (markdown) debe contener gráficos y análisis de comparación entre la ejecución procedural y la distribuida, mostrando la escalabilidad y el speedup del mismo. El informe además debe contener el diseño de la solución y la comparativa de profilers.
+El informe (markdown) debe contener gráficos y análisis de comparación entre la ejecución procedural y la distribuida, mostrando la escalabilidad y el speedup del mismo (uno, dos, cuatro procesos, etc). El informe además debe contener el diseño de la solución y la comparativa de profilers.
 
 ## Links
 - [Introduction to parallel programming](https://hpc.llnl.gov/documentation/tutorials/introduction-parallel-computing-tutorial)
